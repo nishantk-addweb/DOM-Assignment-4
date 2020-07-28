@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: blue;
+  border-radius: 60%;
+}
+</style>
+<body>
+  <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+  <p><button onclick="myMove()">Start Game</button></p> 
+
+  <div id ="container">
+  <!-- <div id ="animate"></div> -->
+  <button id="animate" onclick="changepos()" ></button>
+</div>
+<div>
+	<label>your score:</label><input type="text" name="TextBox" id="TextBox" value="0" disabled="" />
+</div>
+<script>	
+		function changepos(){
+		//alert("hello");
+
+		var elem = document.getElementById("animate");
+
+		var position1 = Math.floor((Math.random() * 350) + 1);
+		var position2 = Math.floor((Math.random() * 350) + 1);
+
+		elem.style.top = position1 + "px"; 
+      	elem.style.left = position2 + "px";		
+		// var id = setInterval(frame, 30);
+		// var pos=0;
+  // 		function frame() {
+  //   		if (pos == 350) {
+  //  		   clearInterval(id);
+  //   		} else {
+  //    		 pos++; 
+  //     		elem.style.top = position1 + "px"; 
+  //   		  elem.style.left = position2 + "px"; 
+  //   		}
+  // 		}
+
+	}
+	//counter for correct clicked value
+	 $(document).ready(function(){
+                $('#animate').click( function() {
+                    var counter = $('#TextBox').val();
+                    counter++ ;
+                    $('#TextBox').val(counter);
+                });
+            });
+
+	 function myMove(){
+  		var x = document.getElementById("container");
+  		if (x.style.display === "none") {
+    	x.style.display = "block";
+  		} else {
+    	x.style.display = "none";
+  		}
+	 }
+
+</script>
+</body>
+</html>

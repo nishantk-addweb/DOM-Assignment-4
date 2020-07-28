@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web page</title>
+	<script type="text/javascript">
+		function loadform(){
+			 //window.alert('page is successfully loaded');
+			 var name = document.createElement('input');
+			 name.setAttribute('type','text');
+			 name.setAttribute('placeholder','Enter name');
+
+			 name.addEventListener("blur",checkname);
+			 function checkname(){
+			 	var letters= /^[A-Za-z]+$/;
+			 	if(!name.value.match(letters)){
+			 		alert('name not match');
+			 		name.value="";
+			 	}
+			 }
+
+			 var email =document.createElement('input');
+			 email.setAttribute('type','email');
+			 email.setAttribute('placeholder','Enter email');
+			 email.addEventListener("blur",checkemail);
+			 function checkemail(){
+			 	var letter=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			 	if(!email.value.match(letter)){
+			 		alert('email not match');
+			 		email.value="";
+			 	}
+			 }
+			 var number =document.createElement('input');
+			 number.setAttribute('type','text');
+			 number.setAttribute('placeholder','Enter number');
+			 number.addEventListener("blur",checknumber);
+			 function checknumber(){
+			 	var numbers = /^[0-9]+$/;
+			 	if(!number.value.match(numbers)){
+			 		alert('number not match');
+			 		number.value="";
+			 	}
+			 }
+
+			 var submit =document.createElement('input');
+			 submit.setAttribute('type','submit');
+
+			 submit.addEventListener("click",submitdata);
+			 function submitdata(){
+			 	var cname=document.cookie="username ="+name.value;
+			 	var cemail=document.cookie="email ="+email.value;
+			 	var cnumber=document.cookie="number ="+number.value;
+
+			 	document.write(cname);
+			 	document.write(cemail);
+			 	document.write(cnumber);
+			 	
+			 }
+			 document.body.appendChild(name);
+			 document.body.appendChild(email);
+			 document.body.appendChild(number);
+			 document.body.appendChild(submit);
+
+			 
+		}
+	</script>
+</head>
+<body onload="loadform()">
+	<!-- -->
+</body>
+</html>

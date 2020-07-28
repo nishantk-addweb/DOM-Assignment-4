@@ -1,0 +1,229 @@
+<!doctype html>  
+<html>  
+    <head>  
+        <title>Calculator</title> 
+       <!-- <link rel="stylesheet" type="text/css" href="sample.css">  -->
+        <style>  
+            body {    
+    background-color:#fff;    
+    margin: 0px auto;    
+    }    
+    .calbody{    
+     background: #f18973;    
+     border: 6px solid #80ced6;    
+     padding: 10px;    
+     margin-left: 450px;    
+     min-width: 21.4em;    
+     max-width: 21.4em;          
+    }    
+    h1{    
+     text-align: center;    
+     font-size: 40px;    
+     color: #003652;    
+    }    
+    #sinput{    
+     text-align: right;    
+     width: 18em;    
+     height: 40px;    
+     font-size: 18px;    
+    }    
+    #finput{    
+     color: grey;    
+     text-align: right;    
+     width: 21.6em;    
+     height: 35px;    
+     font-size: 15px;    
+    }    
+    button{    
+     background-color: #fff;    
+     width: 80px;    
+     height: 60px;    
+     font-size: 20px;    
+     border: 1px solid #097C9B;   
+    }    
+    button:hover{    
+      background-color: #509CA9;        
+     }    
+    </style>
+       <script>
+                   //js for calculator
+        var firstnumber;  
+        var secondnumber;  
+        var result;  
+        var operation;  
+  
+        function numone() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "1";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "1";  
+            }  
+        }  
+  
+        function numtwo() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "2";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "2";  
+            }  
+        }
+
+        function numthree() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "3";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "3";  
+            }  
+        }  
+  
+        function numfour() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "4";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "4";  
+            }  
+        }  
+  
+        function numfive() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "5";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "5";  
+            }  
+        }  
+  
+        function numsix() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "6";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "6";  
+            }  
+        }  
+  
+        function numseven() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "7";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "7";  
+            }  
+        }  
+
+        function numeight() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "8";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "8";  
+            }  
+        }  
+  
+        function numnine() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "9";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "9";  
+            }  
+        }  
+  
+        function numzero() {  
+            if (document.iform.sinput.value == "0" || document.iform.sinput.value == result) {  
+                document.iform.sinput.value = "0";  
+            } else //if(document.iform.sinput.value != "0")    
+            {  
+                document.iform.sinput.value = document.iform.sinput.value + "0";  
+            }  
+        }  
+        function clr() {  
+            document.iform.sinput.value = "0";  
+            document.iform.finput.value = "";  
+            return;  
+        }  
+        function operationplus() {  
+            operation = "+";  
+            firstnumber = parseInt(document.iform.sinput.value);  
+            document.iform.sinput.value = "0";  
+            document.iform.finput.value = firstnumber + operation;
+            //alert(firstnumber);    
+        }  
+  
+        function operationmult() {  
+            operation = "*";  
+            firstnumber = parseInt(document.iform.sinput.value);  
+            document.iform.sinput.value = "0";  
+            document.iform.finput.value = firstnumber + operation;
+        }  
+  
+        function operationminus() {  
+            operation = "-";  
+            firstnumber = parseInt(document.iform.sinput.value);  
+            document.iform.sinput.value = "0";  
+            document.iform.finput.value = firstnumber + operation;
+        }  
+  
+        function operationdivid() {  
+            operation = "/";  
+            firstnumber = parseInt(document.iform.sinput.value);  
+            document.iform.sinput.value = "0";  
+            document.iform.finput.value = firstnumber + operation;
+        }
+
+        function equalsto() {  
+            secondnumber = parseInt(document.iform.sinput.value);  
+            if (operation == "+") {  
+                result = firstnumber + secondnumber;  
+            } else if (operation == "*") {  
+                result = firstnumber * secondnumber;  
+            } else if (operation == "-") {  
+                result = firstnumber - secondnumber;  
+            } else if (operation == "/") {  
+                result = firstnumber / secondnumber;  
+            }  
+            //document.iform.sinput.value = "";  
+            document.iform.sinput.value = result.toString();  
+            document.iform.finput.value = firstnumber + operation + secondnumber + " = " + result.toString();  
+            return;  
+        }  
+
+       </script> 
+
+    </head>  
+    <body>  
+        <h1>Calculator</h1>  
+        <div class="calbody">  
+            <form name="iform">  
+                <input id="finput" name="finput" type="text" value="" / disabled>  
+                <input id="sinput" name="sinput" type="text" value="0" />  
+            </form>  
+            <div id="calbutton">  
+                <!-- first row -->
+                <button id="num1" onclick="numone();">1</button>  
+                <button id="num2" onclick="numtwo();">2</button>  
+                <button id="num3" onclick="numthree();">3</button> 
+                <button id="operationplus" onclick="operationplus();">+</button>  
+                  <!-- second row -->
+                <button id="num4" onclick="numfour();">4</button>  
+                <button id="num5" onclick="numfive();">5</button>  
+                <button id="num6" onclick="numsix();">6</button>  
+                <button id="operationmult" onclick="operationmult();">*</button>
+                <!-- third row -->
+                <button id="num7" onclick="numseven();">7</button> 
+                <button id="num8" onclick="numeight();">8</button> 
+                <button id="num9" onclick="numnine();">9</button>  
+                <button id="operationminus" onclick="operationminus();">-</button>
+                <!-- fourth row   -->
+                <button id="clr" onclick="clr();">C</button>  
+                <button id="num0" onclick="numzero();">0</button>  
+               <button id="sumbit" onclick="equalsto();">=</button>
+                <button id="operationdivid" onclick="operationdivid();">/</button>     
+            </div>  
+        </div>
+    </body>
+</html>
